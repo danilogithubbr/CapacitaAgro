@@ -264,11 +264,16 @@ def salva_colaborador(
                 raise e
 
 # CRUD Buscar======================    
+def ler_todos_usuarios():
+    with Session(bind=engine) as session:
+        resultados = session.query(Usuario).all()
+        return resultados
+    
 def buscar_todos_usuarios():
     with Session(bind=engine) as session:
         resultados = session.query(Usuario).all()
         df = pd.DataFrame([{"id": user.id, "nome": user.nome, "email": user.email} for user in resultados])
-        return df
+        return resultados
         
 def buscar_todas_funcoes():
     with Session(bind=engine) as session:

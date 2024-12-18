@@ -2,7 +2,7 @@ from time import sleep
 from datetime import date
 import streamlit as st
 
-from model import le_todos_usuarios
+
 from componentes import login, logout
 
 
