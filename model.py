@@ -273,7 +273,7 @@ def buscar_todos_usuarios():
     with Session(bind=engine) as session:
         resultados = session.query(Usuario).all()
         df = pd.DataFrame([{"id": user.id, "nome": user.nome, "email": user.email} for user in resultados])
-        return resultados
+        return df
         
 def buscar_todas_funcoes():
     with Session(bind=engine) as session:
