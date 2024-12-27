@@ -48,6 +48,7 @@ def main():
         st.warning("Você precisa estar logado para acessar esta página.")
         return
     else:
+        st.set_page_config(page_title="CAPACITA-Processo", layout="wide", initial_sidebar_state="auto")
         usuario_logado = st.session_state['usuario']
         # Exibir a interface de pesquisa de funcoes
         with st.expander("Pesquisa de Processo", expanded=True):

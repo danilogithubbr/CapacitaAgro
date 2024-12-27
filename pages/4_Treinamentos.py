@@ -23,7 +23,7 @@ def formTreinamento():
 
         dias_valido = st.number_input(
             label="dias",
-            min_value=365,
+            min_value=1,
             format="%d",
             help="Validade do treinamento em dias."
         )
@@ -57,6 +57,7 @@ def main():
         st.warning("Você precisa estar logado para acessar esta página.")
         return
     else:
+        st.set_page_config(page_title="CAPACITA-Treinamento", layout="wide", initial_sidebar_state="auto")
         usuario_logado = st.session_state['usuario']
         # Exibir a interface de pesquisa de funcoes
         with st.expander("Pesquisa de Treinamentos", expanded=True):

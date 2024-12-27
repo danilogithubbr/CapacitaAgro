@@ -66,7 +66,7 @@ def formLancamento():
 
             data_validade = st.date_input(
                 label="Data de Vencimento",
-                value= detalhes_df.iloc[0]["data_validade"] if not detalhes_df.empty else date.today() + timedelta(days=60),
+                value= detalhes_df.iloc[0]["data_validade"] if not detalhes_df.empty else date.today() + timedelta(days=-1),
                 format="DD/MM/YYYY",
                 disabled=True,
                 help="Selecione a data em que o treinamento foi realizado."
@@ -128,6 +128,7 @@ def main():
         st.warning("Você precisa estar logado para acessar esta página.")
         return
     else:
+        st.set_page_config(page_title="CAPACITA-Lancamento", layout="wide", initial_sidebar_state="auto")
         usuario_logado = st.session_state['usuario']
         st.sidebar.write(f'Usuário logado: {usuario_logado.nome}')
 
