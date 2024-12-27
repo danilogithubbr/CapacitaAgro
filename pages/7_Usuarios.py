@@ -57,6 +57,7 @@ def main():
         st.warning("Você precisa estar logado para acessar esta página.")
         return
     else:
+        st.set_page_config(page_title="CAPACITA-Usuario", layout="wide", initial_sidebar_state="auto")
         usuario_logado = st.session_state['usuario']
         st.sidebar.write(f'Usuário logado: {usuario_logado.nome}')
 

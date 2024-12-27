@@ -1,14 +1,14 @@
 from time import sleep
 import streamlit as st
 
-from model import le_todos_usuarios
+from model import ler_todos_usuarios
 
 
 def login():
     with st.container(border=True):
         with st.expander("Login", expanded=True):
             st.markdown('Bem-vindo a tela de login')
-            usuarios = le_todos_usuarios()
+            usuarios = ler_todos_usuarios()
             usuarios = {usuario.nome: usuario for usuario in usuarios}
             nome_usuario = st.selectbox(
                 'Selecione o usuário',

@@ -264,6 +264,11 @@ def salva_colaborador(
                 raise e
 
 # CRUD Buscar======================    
+def ler_todos_usuarios():
+    with Session(bind=engine) as session:
+        resultados = session.query(Usuario).all()
+        return resultados
+    
 def buscar_todos_usuarios():
     with Session(bind=engine) as session:
         resultados = session.query(Usuario).all()
