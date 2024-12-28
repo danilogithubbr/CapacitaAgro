@@ -1,6 +1,6 @@
 from time import sleep
 from datetime import date
-import locale
+#import locale
 import plotly.graph_objects as go
 import numpy as np
 import streamlit as st
@@ -9,7 +9,7 @@ from componentes import login, logout
 from graficos import barras, trace
 from model import buscar_todos_lancamentos
 
-locale.setlocale(locale.LC_ALL, 'pt_BR')
+#locale.setlocale(locale.LC_ALL, 'pt_BR')
 
 if 'logado' not in st.session_state:
         st.session_state['logado'] = False
