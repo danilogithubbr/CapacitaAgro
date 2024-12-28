@@ -21,9 +21,11 @@ else:
 
 #block-container
 def ordena_mes(mes):
-    meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 
-            'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
-    return meses.index(mes)
+    meses_en = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+    meses_pt = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+    indice = meses_en.index(mes.lower())
+    return meses_pt[indice]
+        
 def ordena_processo(processo):
     processos = ['Plantio', 'Tratos', 'Colheita', 'Manutenção', 'Qualidade', 'Serviços Agr.']
     return processos.index(processo)
