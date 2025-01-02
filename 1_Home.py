@@ -50,7 +50,7 @@ def dashboard():
     df2["mes"] = df2['data_validade'].apply(lambda x: x.strftime('%B'))
     df2["ano"] = df2['data_validade'].apply(lambda x: x.year).astype(int)
     anos = df2['ano'].unique()
-    #st.divider()
+    st.divider()
     colTitulo, colFiltro = st.columns(spec=[0.7,0.3], gap="large", vertical_alignment="top")
     with colTitulo:
         st.title("Capacita-Agro | Acompanhamento Treinamentos")
